@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <Python.h>
 
 /**
@@ -9,21 +8,21 @@
  */
 void print_python_list_info(PyObject *p)
 {
-	PyObject *object;
-	long int obj_size, idx = 0;
-	PyListObject *list;
+	PyObject *obj;
+	int idx = 0, size, alloc;
 
-	obj_size = Py_SIZE(p);
-	printf("[*] Size of the Python List = %ld\n", obj_size);
+	size = Py_SIZE(p);
+	alloc = ((PyListObject *)p)->allocated;
 
-	list = (PyListObject *)p;
-	printf("[*] Allocated = %ld\n", list->allocated);
+	printf("[*] Size of the Python List = %d\n", size);
+	printf("[*] Allocated = %d\n", alloc);
 
-	while (idx < obj_size)
+	while (idx < size)
 	{
-		object = PyList_GetItem(p, idx);
-		printf("Element %ld: %s\n", idx, Py_TYPE(object)->tp_name);
+		printf("Element %d: ", idx);
 
+		obj = PyList_GetItem(p, idx);
+		printf("%s\n", Py_TYPE(obj)->tp_name);
 		idx++;
 	}
 }
