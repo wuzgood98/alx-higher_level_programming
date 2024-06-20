@@ -61,10 +61,7 @@ class SinglyLinkedList:
         """
 
         new_node = Node(value)
-        if self.__head is None:
-            new_node.next_node = None
-            self.__head = new_node
-        elif self.__head.data > new_node.data:
+        if self.__head is None or self.__head.data >= new_node.data:
             new_node.next_node = self.__head
             self.__head = new_node
         else:
@@ -72,8 +69,8 @@ class SinglyLinkedList:
             while (current.next_node is not None and
                     current.next_node.data < new_node.data):
                 current = current.next_node
-                new_node.next_node = current.next_node
-                current.next_node = new_node
+            new_node.next_node = current.next_node
+            current.next_node = new_node
 
     def __str__(self):
         """Convert the linked list to a string representation
