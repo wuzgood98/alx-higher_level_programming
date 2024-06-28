@@ -45,7 +45,7 @@ a TypeError is raised.
 
 ::
 
-	>>> say_my_name('Lionel', {l_name: 'Messi'})
+	>>> say_my_name('Lionel', {'l_name': 'Messi'})
 	Traceback (most recent call last):
 	TypeError: last_name must be a string
 
