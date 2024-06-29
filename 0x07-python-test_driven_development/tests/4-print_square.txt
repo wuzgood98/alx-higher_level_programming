@@ -66,6 +66,12 @@ The paramater ```size``` must be an integer. Otherwise a TypeError is raised.
 	Traceback (most recent call last):
 	TypeError: size must be an integer
 
+::
+
+	>>> print_square(-1.2)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
 Invalid size value
 ==================
 
@@ -74,12 +80,6 @@ The parameter ```size``` must be >= 0. Otherwise raise a ValueError.
 ::
 
 	>>> print_square(-1)
-	Traceback (most recent call last):
-	ValueError: size must be >= 0
-
-::
-
-	>>> print_square(-1.2)
 	Traceback (most recent call last):
 	ValueError: size must be >= 0
 
