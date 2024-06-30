@@ -41,7 +41,7 @@ Similarly, no spaces are printed at the end of each printed line.
 
 ::
 
-	>>> text_indentation('    Hm.    Nope, don't do it this way.')
+	>>> text_indentation("    Hm.    Nope, don't do it this way.")
 	Hm.
 	<BLANKLINE>
 	Nope, don't do it this way.
