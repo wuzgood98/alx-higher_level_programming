@@ -23,7 +23,7 @@ No spaces are printed at the beginning of a line.
 
 ::
 
-	>>> text_indentation('   Yo, wassup?")
+	>>> text_indentation('   Yo, wassup?')
 	Yo, wassup?
 	<BLANKLINE>
 
