@@ -32,4 +32,9 @@ def text_indentation(text):
             continue
         i += 1
 
-    print(result, end='')
+    # Split the result by new lines and strip each line to remove
+    # leading trailing spaces
+    lines = [line.strip() for line in result.split('\n')]
+    final_result = '\n'.join(lines)
+
+    print(final_result, end='')
