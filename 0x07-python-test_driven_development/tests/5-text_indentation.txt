@@ -1,0 +1,106 @@
+# 5-text_indentation.py
+# Gideon O Addo
+
+================================
+How to use 5-text_indentation.py
+================================
+
+This module defines a text-indentation function ``text_indentation(text)``.
+
+Usage
+=====
+
+``text_indentation(...)`` prints prints a text with 2 new lines after each of these characters: ., ? and :
+
+::
+
+	>>> text_indentation = __import__('5-text_indentation.py').text_indentation
+	>>> text_indentation('Messi?')
+	Messi?
+	<BLANKLINE>
+
+No spaces are printed at the beginning of a line.
+
+::
+
+	>>> text_indentation('   Yo, wassup?")
+	Yo, wassup?
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation('       ')
+
+Similarly, no spaces are printed at the end of each printed line.
+
+::
+
+	>>> text_indentation('Hi.   ')
+	Hi.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation('    Hm.    Nope, don't do it this way.')
+	Hm.
+	<BLANKLINE>
+	Nope, don't do it this way.
+	<BLANKLINE>
+
+New lines are only printed for the characters ``,``, ``?``, and ``:`` -
+text not ending with one of these characters is not ended with a new line.
+
+::
+
+	>>> text_indentation('No period at the end, what a bad writing')
+	No period at the end, what a bad writing
+
+New lines within a string are printed as normal.
+
+::
+
+	>>> text_indentation("Print a new-line! Here we go:\nPrinted.")
+	Print a new-line! Here we go:
+	<BLANKLINE>
+	<BLANKLINE>
+	Printed.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation("\n\n\n We just printed three new lines.")
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+	We just printed three new lines.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation('A sneaky \n new line.')
+	A sneaky
+	new line.
+	<BLANKLINE>
+
+Invalid type
+=============
+
+The parameter ``text`` must be a string. Otherwise, a TypeError is raised.
+
+::
+
+	>>> text_indentation(7)
+	Traceback (most recent call last)
+	TypeError: text must be a string
+
+::
+
+	>>> text_indentation(None)
+	Traceback (most recent call last)
+	TypeError: text must be a string
+
+::
+
+	>>> text_indentation(['Nope', 'not', 'a', 'list'])
+	Traceback (most recent call last)
+	TypeError: text must be a string
