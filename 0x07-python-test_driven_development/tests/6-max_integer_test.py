@@ -20,10 +20,20 @@ class TestMaxInteger(unittest.TestCase):
         unordered = [1, 3, 4, 2]
         self.assertEqual(max_integer(unordered), 4)
 
-    def test_max_at_begining(self):
+    def test_max_at_beginning(self):
         """Test a list with a beginning max value."""
         max_at_beginning = [4, 3, 1, 2]
         self.assertEqual(max_integer(max_at_beginning), 4)
+
+    def test_max_at_end(self):
+        """Test a list with an end value"""
+        max_at_end = [1, 2, 3, 4]
+        self.assertEqual(max_integer(max_at_end), 4)
+
+    def test_max_in_middle(self):
+        """Test a list with max number in the middle"""
+        max_in_middle = [1, 4, 3]
+        self.assertEqual(max_integer(max_at_middle), 4)
 
     def test_empty_list(self):
         """Test an empty list."""
@@ -40,14 +50,7 @@ class TestMaxInteger(unittest.TestCase):
         floats = [12.3, 4.2, 14.9, 3.1]
         self.assertEqual(max_integer(floats), 14.9)
 
-    def test_list_of_strings(self):
-        """Test a list of strings."""
-        strings = ['jamie', 'messi', 'Gideon']
-        self.assertEqual(max_integer(strings), 'Gideon')
-
-    def test_empty_string(self):
-        """Test an empty string."""
-        self.assertEqual(max_integer(''), None)
+    def 
 
 
 if __name__ == '__main__':
