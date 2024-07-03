@@ -11,7 +11,7 @@
  */
 void print_python_string(PyObject *p)
 {
-	lont int length;
+	long int length;
 
 	fflush(stdout);
 
