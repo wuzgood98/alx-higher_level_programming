@@ -17,4 +17,4 @@ def lazy_matrix_mul(m_a, m_b):
         numpy.ndarray: The resulting matrix product.
     """
 
-    return np.matmul(m_a, m_b)
+    return (np.matmul(np.array(m_a), np.array(m_b)))
