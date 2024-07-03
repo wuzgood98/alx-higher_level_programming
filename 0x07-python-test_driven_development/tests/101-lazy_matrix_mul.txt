@@ -21,7 +21,7 @@ Usage
 	... ]
 	>>> m_b = m_a
 	>>> print(lazy_matrix_mul(m_a, m_b))
-	[[7, 10], [15, 22]]
+	[[7 10] [15 22]]
 
 ::
 
@@ -31,7 +31,7 @@ Usage
 	... [5, 6]
 	... ]
 	>>> print(lazy_matrix_mul(m_a, m_b))
-	[[13, 16]]
+	[[13 16]]
 
 The function also works with floating-point numbers.
 
@@ -47,7 +47,7 @@ The function also works with floating-point numbers.
 	... [7.2, 4.4]
 	... ]
 	>>> print(lazy_matrix_mul(m_a, m_b))
-	[[34.69, 55.44], [-78.61, 29.018]]
+	[[34.69 55.44] [-78.61 29.018]]
 
 A minimum of two integers must be provided.
 
