@@ -46,7 +46,7 @@ A ``TypeError`` will be raised for any more than one instantiation arguments.
 
 	>>> my_list = MyList([1, 2], [3, 4])
 	Traceback (most recent call last):
-	TypeError: list() takes at most 1 argument (2 given)
+	TypeError: list takes at most 1 argument (2 given)
 
 Usage
 =====
@@ -137,7 +137,7 @@ Note that lists of strings are sorted lexographically.
 	>>> my_list.append("Holberton")
 	>>> my_list.append("Betty")
 	>>> print(my_list)
-	['Brent', 'Poly', 'Stool', 'Hole', 'Betty']
+	['Brennan', 'Poppy', 'School', 'Holberton', 'Betty']
 
 ::
 
