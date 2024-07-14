@@ -81,6 +81,12 @@ But, if ``value`` is not an integer, a ``TypeError`` is raised.
 
 ::
 
+	>>> bg.integer_validator("age", True)
+	Traceback (most recent call last):
+	TypeError: invalid bool must be an integer
+
+::
+
 	>>> bg.integer_validator("invalid tuple", (1,))
 	Traceback (most recent call last):
 	TypeError: invalid tuple must be an integer
