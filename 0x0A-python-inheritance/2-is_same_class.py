@@ -7,7 +7,7 @@
 def is_same_class(obj, a_class):
     """
     Check if an object is exactly the same as an instance of a given class.
-    
+
     Args:
         obj (any): Object to compare with the class
         a_class (type): class to compare with the object.
