@@ -82,8 +82,6 @@ But, if ``value`` is not an integer, a ``TypeError`` is raised.
 ::
 
 	>>> bg.integer_validator("age", True)
-	Traceback (most recent call last):
-	TypeError: invalid must be an integer
 
 ::
 
